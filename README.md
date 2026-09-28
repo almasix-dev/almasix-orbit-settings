@@ -2,6 +2,13 @@
 
 Manage typed [Almasix Settings](https://github.com/almasix-dev/almasix-settings) visually in an Orbit panel.
 
+![General settings page in an Orbit panel](docs/images/general-settings.png)
+
+<p align="center">
+  <img src="docs/images/general-settings-form.png" alt="General settings form fields" width="48%" />
+  <img src="docs/images/general-settings-dark.png" alt="General settings page in dark mode" width="48%" />
+</p>
+
 ## Install
 
 ```bash
