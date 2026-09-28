@@ -20,6 +20,8 @@ jobs:
       - name: Install
         run: |
           python -m pip install -U pip
+          # almasix-settings is not on PyPI yet — install from GitHub for CI.
+          pip install "almasix-settings @ git+https://github.com/almasix-dev/almasix-settings.git@main"
           pip install -e ".[dev]"
       - name: Ruff
         run: |

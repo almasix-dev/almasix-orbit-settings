@@ -66,7 +66,9 @@ jobs:
           name: dist
           path: dist
       - name: Install the wheel
-        run: pip install dist/*.whl
+        run: |
+          pip install "almasix-settings @ git+https://github.com/almasix-dev/almasix-settings.git@main"
+          pip install dist/*.whl
       - name: Import package
         run: |
           python - <<'PY'
