@@ -1,0 +1,54 @@
+name: Orbit Settings
+slug: orbit-settings
+summary: Define typed settings classes and manage them visually in Orbit panels.
+description: |
+  ## What it does
+
+  Pair typed `almasix.settings.Settings` classes with Orbit `SettingsPage`
+  forms. The plugin registers those pages on your panel, loads and saves through
+  Conduit, encrypts sensitive properties with Almasix `Crypt`, and respects
+  panel tenancy for tenant-scoped settings.
+
+  ## Install
+
+  ```bash
+  pip install almasix-settings almasix-orbit-settings
+  smith migrate
+  ```
+
+  ```python
+  from almasix_orbit_settings import SettingsPlugin
+
+  panel.plugin(
+      SettingsPlugin.make()
+      .navigation_group("Settings")
+      .pages([ManageGeneralSettings])
+  )
+  ```
+
+  Optional Redis repository: `pip install almasix-settings[redis]`.
+
+  Full README: [almasix-orbit-settings](https://github.com/almasix-dev/almasix-orbit-settings).
+author: almasix
+categories:
+  - panel-kit
+orbit_versions:
+  - "0.5"
+price: free
+package: almasix-orbit-settings
+github_repo: almasix-dev/almasix-orbit-settings
+repository: https://github.com/almasix-dev/almasix-orbit-settings
+docs_url: https://orbit.almasix.com/plugins/orbit-settings/
+homepage: https://orbit.almasix.com/plugins/orbit-settings/
+changelog_url: https://github.com/almasix-dev/almasix-orbit-settings/releases
+license: MIT
+keywords:
+  - settings
+  - configuration
+  - panel
+  - tenancy
+requires_python: ">=3.11"
+status: draft
+thumbnail: /plugins/orbit-settings/thumbnail.png
+screenshots:
+  - /plugins/orbit-settings/screenshot-1.png
