@@ -152,7 +152,7 @@ class SettingsFormHost(FormDataMutations, OrbitPageHost):
             f'<header class="or-page-header"><h1 class="or-page-title">{title}</h1></header>'
             f"{notice}"
             f'<form class="or-form"{conduit_attr("submit", "save")} '
-            f'x-data '
+            f"x-data "
             f'@keydown.ctrl.s.window.prevent="$el.requestSubmit()" '
             f'@keydown.meta.s.window.prevent="$el.requestSubmit()">'
             f"{body}{actions}</form></div>"

@@ -42,7 +42,10 @@ class SettingsPlugin(Plugin):
             return
         group = self.config.navigation_group
         for page in extras:
-            if getattr(page, "navigation_group", None) is None or page.navigation_group == "Settings":
+            if (
+                getattr(page, "navigation_group", None) is None
+                or page.navigation_group == "Settings"
+            ):
                 page.navigation_group = group
             if self.config.cluster is not None and getattr(page, "cluster", None) is None:
                 page.cluster = self.config.cluster
